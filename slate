@@ -14,14 +14,14 @@ bind up:ctrl;alt     resize +0   +10% bottom-right
 bind down:ctrl;alt   resize +0   -10% bottom-right
 
 # Push Bindings
-bind right:shift;cmd  push right bar-resize:screenSizeX/2
-bind left:shift;cmd   push left  bar-resize:screenSizeX/2
-bind up:shift;cmd     throw 0 resize
-bind down:shift;cmd   push down  bar-resize:screenSizeY/2
+bind right:shift;cmd;alt  push right bar-resize:screenSizeX/2
+bind left:shift;cmd;alt   push left  bar-resize:screenSizeX/2
+bind up:shift;cmd;alt     throw 0 resize
+bind down:shift;cmd;alt   push down  bar-resize:screenSizeY/2
 
 # Nudge Bindings
-bind right:shift;alt nudge +33% +0
-bind left:shift;alt  nudge -33% +0
+//bind right:shift;alt nudge +33% +0
+//bind left:shift;alt  nudge -33% +0
 bind up:shift;alt    nudge +0   -10%
 bind down:shift;alt  nudge +0   +10%
 
@@ -40,3 +40,9 @@ bind down:cmd;alt focus behind
 
 # Window Hints
 bind esc:cmd hint
+
+alias PrevMonitor throw previous
+alias NextMonitor throw next
+
+bind ,:cmd;shift ${PrevMonitor}
+bind .:cmd;shift ${NextMonitor}
